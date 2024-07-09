@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -5,14 +7,20 @@ public class Main {
     int id = 0;
     String name = "";
     short age = 0;
+    List<Student> students = new ArrayList<>();
 
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter student's ID:");
     id = Integer.parseInt(scanner.nextLine());
-    Student firstStudent = new Student(id, "Billy", (short) 15);
-    firstStudent.displayInformation();
-
-
+    System.out.println("Enter student's name:");
+    name = scanner.nextLine();
+    System.out.println("Enter student's age:");
+    age = Short.parseShort(scanner.nextLine());
+    Student newStudent = new Student(id, name, age);
+    students.add(newStudent);
+    for (Student student : students) {
+      student.displayInformation();
+    }
   }
 
   static class Student {
