@@ -1,9 +1,18 @@
+import java.util.Scanner;
+
 public class Main {
   public static void main(String[] args) {
+    int id = 0;
+    String name = "";
+    short age = 0;
 
-    Student firstStudent = new Student(1, "Billy", (short) 15);
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter student's ID:");
+    id = Integer.parseInt(scanner.nextLine());
+    Student firstStudent = new Student(id, "Billy", (short) 15);
     firstStudent.displayInformation();
-//    System.out.println(firstStudent.id + ": " + firstStudent.name + " (" + firstStudent.age + " years old)");
+
+
   }
 
   static class Student {
