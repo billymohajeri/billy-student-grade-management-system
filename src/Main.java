@@ -7,20 +7,6 @@ public class Main {
     int id = 0;
     String name = "";
     short age = 0;
-    List<Student> students = new ArrayList<>();
-
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Enter student's ID:");
-    id = Integer.parseInt(scanner.nextLine());
-    System.out.println("Enter student's name:");
-    name = scanner.nextLine();
-    System.out.println("Enter student's age:");
-    age = Short.parseShort(scanner.nextLine());
-    Student newStudent = new Student(id, name, age);
-    students.add(newStudent);
-    for (Student student : students) {
-      student.displayInformation();
-    }
   }
 
   static class Student {
@@ -38,8 +24,17 @@ public class Main {
       System.out.println(this.id + ": " + this.name + " (" + this.age + " years old)");
     }
 
-
+    public void addStudent() {
+      List<Student> students = new ArrayList<>();
+      Scanner scanner = new Scanner(System.in);
+      System.out.println("Enter student's ID:");
+      id = Integer.parseInt(scanner.nextLine());
+      System.out.println("Enter student's name:");
+      name = scanner.nextLine();
+      System.out.println("Enter student's age:");
+      age = Short.parseShort(scanner.nextLine());
+      Student newStudent = new Student(id, name, age);
+      students.add(newStudent);
+    }
   }
-
-
 }
