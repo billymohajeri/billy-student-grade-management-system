@@ -20,6 +20,10 @@ public class Main {
       this.age = age;
     }
 
+    public int getId() {
+      return id;
+    }
+
     public void displayInformation() {
       System.out.println(this.id + ": " + this.name + " (" + this.age + " years old)");
     }
