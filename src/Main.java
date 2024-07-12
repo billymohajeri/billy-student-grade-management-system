@@ -24,6 +24,10 @@ public class Main {
       return id;
     }
 
+    public String getName() {
+      return name;
+    }
+
     public void displayInformation() {
       System.out.println(this.id + ": " + this.name + " (" + this.age + " years old)");
     }
