@@ -28,6 +28,10 @@ public class Main {
       return _name;
     }
 
+    public short get_age() {
+      return _age;
+    }
+
     public void displayInformation() {
       System.out.println(_id + ": " + _name + " (" + _age + " years old)");
     }
