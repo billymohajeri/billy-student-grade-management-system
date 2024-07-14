@@ -36,6 +36,12 @@ public class Main {
       System.out.println(_id + ": " + _name + " (" + _age + " years old)");
     }
 
+    public void addGrades() {
+      System.out.println("Student ID: ");
+      System.out.println("Course name: ");
+    }
+
+
     public void addStudent() {
       List<Student> students = new ArrayList<>();
       Scanner scanner = new Scanner(System.in);
