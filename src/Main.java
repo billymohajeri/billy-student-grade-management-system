@@ -10,18 +10,18 @@ public class Main {
   }
 
   static class Student {
-    private int _id;
+    private int id;
     private String _name;
     private short _age;
 
     Student(int id, String name, short age) {
-      _id = id;
+      this.id = id;
       _name = name;
       _age = age;
     }
 
     public int getId() {
-      return _id;
+      return this.id;
     }
 
     public String getName() {
@@ -33,7 +33,7 @@ public class Main {
     }
 
     public void displayInformation() {
-      System.out.println(_id + ": " + _name + " (" + _age + " years old)");
+      System.out.println(this.id + ": " + _name + " (" + _age + " years old)");
     }
 
     public void addGrades() {
@@ -46,12 +46,12 @@ public class Main {
       List<Student> students = new ArrayList<>();
       Scanner scanner = new Scanner(System.in);
       System.out.println("Enter student's ID:");
-      _id = Integer.parseInt(scanner.nextLine());
+      this.id = Integer.parseInt(scanner.nextLine());
       System.out.println("Enter student's name:");
       _name = scanner.nextLine();
       System.out.println("Enter student's age:");
       _age = Short.parseShort(scanner.nextLine());
-      Student newStudent = new Student(_id, _name, _age);
+      Student newStudent = new Student(this.id, _name, _age);
       students.add(newStudent);
     }
   }
