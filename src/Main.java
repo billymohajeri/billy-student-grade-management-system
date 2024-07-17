@@ -3,20 +3,24 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
   public static void main(String[] args) {
     int id = 0;
     String name = "";
     short age = 0;
+    Student student = new Student(id, name, age);
+    student.addStudent();
+    student.displayInformation();
   }
 
   static class Student {
     private int id;
-    private String _name;
+    private String name;
     private short _age;
 
     Student(int id, String name, short age) {
       this.id = id;
-      _name = name;
+      this.name = name;
       _age = age;
     }
 
@@ -25,15 +29,15 @@ public class Main {
     }
 
     public String getName() {
-      return _name;
+      return name;
     }
 
-    public short get_age() {
+    public short geAge() {
       return _age;
     }
 
     public void displayInformation() {
-      System.out.println(this.id + ": " + _name + " (" + _age + " years old)");
+      System.out.println(this.id + ": " + name + " (" + _age + " years old)");
     }
 
     public void addGrades() {
@@ -48,11 +52,13 @@ public class Main {
       System.out.println("Enter student's ID:");
       this.id = Integer.parseInt(scanner.nextLine());
       System.out.println("Enter student's name:");
-      _name = scanner.nextLine();
+      name = scanner.nextLine();
       System.out.println("Enter student's age:");
       _age = Short.parseShort(scanner.nextLine());
-      Student newStudent = new Student(this.id, _name, _age);
+      Student newStudent = new Student(this.id, name, _age);
       students.add(newStudent);
     }
+
   }
+
 }
