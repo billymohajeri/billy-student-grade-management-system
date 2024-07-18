@@ -16,12 +16,12 @@ public class Main {
   static class Student {
     private int id;
     private String name;
-    private short _age;
+    private short age;
 
     Student(int id, String name, short age) {
       this.id = id;
       this.name = name;
-      _age = age;
+      this.age = age;
     }
 
     public int getId() {
@@ -33,11 +33,11 @@ public class Main {
     }
 
     public short geAge() {
-      return _age;
+      return age;
     }
 
     public void displayInformation() {
-      System.out.println(this.id + ": " + name + " (" + _age + " years old)");
+      System.out.println(this.id + ": " + name + " (" + age + " years old)");
     }
 
     public void addGrades() {
@@ -54,8 +54,8 @@ public class Main {
       System.out.println("Enter student's name:");
       name = scanner.nextLine();
       System.out.println("Enter student's age:");
-      _age = Short.parseShort(scanner.nextLine());
-      Student newStudent = new Student(this.id, name, _age);
+      age = Short.parseShort(scanner.nextLine());
+      Student newStudent = new Student(this.id, name, age);
       students.add(newStudent);
     }
 
